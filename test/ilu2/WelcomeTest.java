@@ -27,4 +27,9 @@ class WelcomeTest {
 	void exo3() {
 		assertEquals("HELLO, JERRY !", Welcome.welcome("JERRY"));
 	}
+	
+	@Test
+	void exo4() {
+		assertEquals("Hello, Jerry, Bob", Welcome.welcome("jerry,bob"));
+	}
 }
