@@ -19,8 +19,12 @@ class WelcomeTest {
 	@Test
 	void exo2() {
 		assertEquals("Hello, my friend", Welcome.welcome(""));
-		assertEquals("Hello, my friend", Welcome.welcome("   "));
+		assertEquals("Hello, my friend", Welcome.welcome("\n"));
 
 	}
 
+	@Test
+	void exo3() {
+		assertEquals("HELLO, JERRY !", Welcome.welcome("JERRY"));
+	}
 }
