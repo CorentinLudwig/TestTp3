@@ -32,4 +32,9 @@ class WelcomeTest {
 	void exo4() {
 		assertEquals("Hello, Jerry, Bob", Welcome.welcome("jerry,bob"));
 	}
+	
+	@Test
+	void exo5() {
+		assertEquals("Hello, Jerry, Bob, Amy", Welcome.welcome("jerry,bob,amy"));
+	}
 }
