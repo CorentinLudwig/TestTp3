@@ -9,18 +9,28 @@ public class Welcome {
 		
 		String[] tabinput = input.split(",");
 		StringBuilder wel = new StringBuilder();
+		StringBuilder upper = new StringBuilder();
 		wel.append("Hello, ");
+		upper.append("HELLO, ");
+		
 		
 		for(int i = 0; i<tabinput.length; i++) {
-			wel.append(tabinput[i].substring(0, 1).toUpperCase());
-			wel.append(tabinput[i].substring(1));
-			if(i<tabinput.length-1)
-				wel.append(", ");
+			if(tabinput[i].equals(tabinput[i].toUpperCase())){
+				upper.append(tabinput[i]);
+			} else {
+				wel.append(tabinput[i].substring(0, 1).toUpperCase());
+				wel.append(tabinput[i].substring(1));
+				if(i<tabinput.length-1)
+					wel.append(", ");
+				}
 		}
-		if(input.equals(input.toUpperCase())){
-			wel.append(" !");
-		return wel.toString().toUpperCase();
+		if(upper.length()>7) {
+			upper.append(" !");
+			wel.append(". AND ");
+			wel.append(upper);
 		}
+		if(wel.length()>7)
+			return upper.toString();
 		return wel.toString();
 	}
 }

@@ -37,4 +37,9 @@ class WelcomeTest {
 	void exo5() {
 		assertEquals("Hello, Jerry, Bob, Amy", Welcome.welcome("jerry,bob,amy"));
 	}
+	
+	@Test
+	void exo6() {
+		assertEquals("Hello, Amy, Jerry. AND HELLO, BOB !", Welcome.welcome("Amy,BOB,Jerry"));
+	}
 }
