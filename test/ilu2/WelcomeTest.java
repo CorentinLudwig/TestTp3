@@ -7,9 +7,6 @@ import org.junit.jupiter.api.Test;
 
 class WelcomeTest {
 
-	@BeforeEach
-	void setUp() throws Exception {
-	}
 
 	@Test
 	void exo1() {
@@ -54,5 +51,10 @@ class WelcomeTest {
 	@Test
 	void exo8() {
 		assertEquals("Hello, Bob, Amy and Jerry", Welcome.welcome("    bob    ,amy,   jerry"));
+	}
+	
+	@Test
+	void exo9() {
+		assertEquals("Hello, Bob (x3) and Amy. AND HELLO, JERRY (x2) !", Welcome.welcome("bob,  JERRY  ,amy,bob,JERRY,bob"));
 	}
 }
