@@ -55,6 +55,15 @@ class WelcomeTest {
 	
 	@Test
 	void exo9() {
-		assertEquals("Hello, Bob (x3) and Amy. AND HELLO, JERRY (x2) !", Welcome.welcome("bob,  JERRY  ,amy,bob,JERRY,bob"));
+		// j'ai choisi de mettre le X en majuscule puisque qe cela me semble plus logique  et 
+		// que dans l'exemple de l'exigence suivante il est en majuscule
+		assertEquals("Hello, Bob (x3) and Amy. AND HELLO, JERRY (X2) !", Welcome.welcome("bob,  JERRY  ,amy,bob,JERRY,bob"));
+	}
+	
+	@Test
+	void exo10() {
+		assertEquals("Hello, Bob and Amy. AND YODA (X2) AND JERRY, HELLO !", Welcome.welcome("bob, YODA, amy, JERRY, YODA"));
+		assertEquals("Bob, Yoda and Amy, Hello. AND HELLO, JERRY !", Welcome.welcome("bob, yoda, amy, JERRY"));
+
 	}
 }
